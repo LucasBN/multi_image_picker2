@@ -85,7 +85,7 @@ public class SwiftMultiImagePicker2Plugin: NSObject, FlutterPlugin {
                 return result(FlutterError(code: "PERMISSION_PERMANENTLY_DENIED", message: "The user has denied the gallery access.", details: nil))
             }
             
-            let vc = ImagePickerController(selectedAssets: assets, source: sourceType.photoLibrary)
+            let vc = ImagePickerController(selectedAssets: assets, sourceType: .photoLibrary)
             
             if #available(iOS 13.0, *) {
                 // Disables iOS 13 swipe to dismiss - to force user to press cancel or done.
